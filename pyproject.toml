@@ -4,6 +4,7 @@ version = "0.3.0"
 description = "Backend service for hikka.io - Ukrainian anime tracker"
 authors = ["Hikka Team"]
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -15,19 +16,22 @@ asyncpg = "^0.28.0"
 meilisearch-python-sdk = "2.1.0"
 bcrypt = "^4.0.1"
 email-validator = "2.0.0.post2"
-pytest = "^7.4.0"
-pytest-postgresql = "^5.0.0"
-async-asgi-testclient = "^1.4.11"
-pytest-asyncio = "^0.21.1"
 aiohttp = "3.9.5"
 apscheduler = "^3.10.4"
-alembic = "^1.11.3"
 greenlet = "^3.0.1"
 aioboto3 = "^12.1.0"
 python-multipart = "0.0.9"
 puremagic = "^1.15"
 imagesize = "^1.4.1"
 sqlalchemy-utils = "^0.41.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+pytest-postgresql = "^5.0.0"
+pytest-asyncio = "^0.21.1"
+async-asgi-testclient = "^1.4.11"
+alembic = "^1.11.3"
+
 
 [build-system]
 requires = ["poetry-core"]
